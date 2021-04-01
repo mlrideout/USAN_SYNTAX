@@ -1,8 +1,8 @@
 {
     "name": "vscode-usan-syntax",
     "displayName": "USAN Syntax",
-    "version": "0.0.16",
-    "publisher": "Madison Inc.",
+    "version": "0.0.17",
+    "publisher": "Madison Rideout",
     "description": "USAN VSCode Syntax",
     "author": {
         "name": "Madison"
