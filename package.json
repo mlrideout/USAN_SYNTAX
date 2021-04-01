@@ -1,0 +1,29 @@
+{
+    "name": "vscode-usan-syntax",
+    "displayName": "USAN Syntax",
+    "version": "0.0.16",
+    "publisher": "Madison Inc.",
+    "description": "USAN VSCode Syntax",
+    "author": {
+        "name": "Madison"
+    },
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "usan",
+            "aliases": ["USAN", "usan"],
+            "extensions": [".app"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "usan",
+            "scopeName": "text.usan",
+            "path": "./syntaxes/usan.tmLanguage.json"
+        }]
+    }
+}

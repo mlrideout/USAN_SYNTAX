@@ -1,0 +1,90 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "USAN APP",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"comment": "Comments",
+					"name": "comment.line.character.usan",
+					"match": "(?<!-)(;).*"
+				},
+				{
+					"comment": "Block Comments",
+					"name": "comment.block.documentation.usan",
+					"match": "\\/\\*[\\s\\S]*?\\*\\/"
+				},
+				{
+					"comment": "Entities",
+					"name": "entity.name.type.usan",
+					"match": "\\b(name|description|filename|id|startingCell|ParamFileUsed|prompt|interruptable|value|cell|maxTries|timeout|choiceLenMax|choiceLenMin|selectionMethod|retryPrompt|timeOutPrompt|choiceType|choiceValue|menuCell|flushDigits|dtmfChoicePrompt|stopDigits|stripStopDigits|final|prefix|speakType|variable|nextCell|reportId|speakOnlyIfNotInterrupted|logEnabled|maxRetries|phoneNumber|outdialRule|outdialGroup|rnaTimeout|outdialPort|holdPorts|bridgeOnFailure|answerCell|busyCell|rnaCell|reorderCell|dialErrorCell|allTrunksBusyCell|bridge|idEnabled|digits|rlt|logvariables|logVariables|usePseudoAni|pseudoAni|listenPorts|bridgeOnAnswer|eventCDRType|eventField|name|description|confidential|encrypted|source|DIGITSWITHINMINMAX|invalid|dtmf|string_spell|string|number|boolean|extdb|dynaprompt|cell|continuousAuto|sivrGrammar|sivrGrammarUrlBase|sivrGrammarURLDocument|sivrBargeIn|sivrHighConfidenceScore|sivrMinConfidenceScore|both|compute_both|NUMERICDIGITSWITHINMINMAX|suffix|phone|bignumber|enum|dynaPrompt|compute_dtmf|sivrChoicePrompt|auto|continuousBoth|enabled|reportName)\\b"
+				},
+				{
+					"comment": "If Cells",
+					"name": "keyword.other.usan",
+					"match": "\\b(value1|cell1|value2|cell2|value3|cell3|value4|cell4|value5|cell5|value6|cell6|value7|cell7|value8|cell8|value9|cell9|value10|cell10)\\b"
+				},
+				{
+					"comment": "c_vars",
+					"name": "keyword.control.usan",
+					"match": "(c_)\\w+"
+				},
+				{
+					"comment": "a_vars",
+					"name": "variable.parameter.usan",
+					"match": "(a_)\\w+"
+				},
+				{
+					"comment": "u_vars",
+					"name": "constant.numeric.usan",
+					"match": "(u_)\\w+"
+				},
+				{
+					"comment": "prompts",
+					"name": "string.quoted.usan",
+					"match": "(pr_)\\w+"
+				},
+				{
+					"comment": "functions",
+					"name": "entity.name.function.usan",
+					"match": "\\b((f_)\\w+|externalFunction)\\b"
+				},
+				{
+					"comment": "Cell/header",
+					"name": "markup.heading.usan",
+					"match": "(?<!-)\\[.*.\\]"
+				},
+				{
+					"comment": "!",
+					"name": "constant.character.usan",
+					"match": "!"
+				},
+				{
+					"comment": "Affirmation",
+					"name": "constant.language.usan",
+					"match": "\\b(N|Y|no|yes|false|true|none)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.usan",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.usan",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "text.usan"
+}
